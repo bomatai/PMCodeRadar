@@ -1,0 +1,25 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Build artifacts
+*.py
+*.pyc
+__pycache__/
+
+# Source assets (not for distribution)
+*.png
+*.jpg
+*.svg
+*.xlsx
+*.zip
+
+# Plugin system (deprecated)
+plugin.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
