@@ -8,11 +8,9 @@
 
 ## The Problem
 
-Most PMs treat the codebase like a foreign country. They know it exists. They've seen photos. They've never been.
+PMs don't read the codebase. So they depend on engineers to tell them what's possible, what's broken, and what's expensive. That dependency shapes every conversation — roadmap reviews, sprint planning, incident response, architecture decisions. You're always one Slack message away from the answer instead of having it yourself.
 
-So when eng says "not possible," they nod. When the funnel drops, they Slack the analyst. When a feature ships broken, they write the post-mortem instead of preventing it.
-
-PMCodeRadar changes that. 23 Claude Code skills that turn your terminal into a codebase co-pilot. You don't need to write code. You need to read it — and know what to do with what you find.
+PMCodeRadar fixes that. 23 Claude Code skills that scan your codebase and give you answers directly — constraints, debt costs, error messages, API surfaces, dead code, privacy risks. No coding required. You just need a terminal and a repo.
 
 Each skill installs as a standalone Claude Code skill in `~/.claude/skills/`. No plugins, no config files, no dependencies. Just copy, restart, and go.
 
