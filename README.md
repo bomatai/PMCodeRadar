@@ -143,7 +143,7 @@ If you see output about your repo, you're good. If you see "skill not found," ch
 After installation, here's exactly what to do:
 
 1. **Open your terminal**, `cd` into any codebase you work on, and start Claude Code.
-2. **Run setup first**: `/pmcoderadar` — it scans your repo and tells you what to run next.
+2. **Run PMCodeRadar first**: `/pmcoderadar` — it scans your repo and tells you what to run next.
 3. **Try one of these beginner skills:**
 
 | Try This | What It Does | Why Start Here |
@@ -183,7 +183,7 @@ After installation, here's exactly what to do:
 | 18 | Feature Flag Impact Audit | `/flag-audit` | 3 | Every flag, what it gates, what breaks if removed |
 | 19 | Third-Party Dependency Map | `/dependency-map` | 3 | Every external vendor and what depends on it |
 | 20 | Migration Risk Assessment | `/migration-risk` | 3 | Risk map for database migrations |
-| 21 | Setup & Repo Diagnostic | `/pmcoderadar` | Meta | Scan your repo and get personalized skill recommendations |
+| 21 | PMCodeRadar (Repo Diagnostic) | `/pmcoderadar` | Meta | Scan your repo and get personalized skill recommendations |
 | 22 | Skill Catalog | `/catalog` | Meta | See the full list of available skills and workflows |
 | 23 | Feedback | `/feedback` | Meta | Share feedback and suggest improvements |
 
@@ -225,7 +225,7 @@ Each skill is self-contained — no dependencies on the others.
 
 A typical PM session might look like:
 
-1. **Start with setup**: `/pmcoderadar` — get the lay of the land
+1. **Start with PMCodeRadar**: `/pmcoderadar` — get the lay of the land
 2. **Map the surface**: `/api-surface-map` — know what your product exposes
 3. **Understand the data**: `/schema-explain` — know what your product stores
 4. **Find the waste**: `/dead-code-audit` — find what can be cleaned up
@@ -305,7 +305,7 @@ Each skill recommends related skills to run next. Here's the full map:
 
 | Goal | Run These (in order) |
 |------|---------------------|
-| **New to the codebase** | setup → schema-explain → api-surface-map → route-audit |
+| **New to the codebase** | pmcoderadar → schema-explain → api-surface-map → route-audit |
 | **Preparing to ship** | pre-ship-scan → error-audit → notification-audit |
 | **Roadmap planning** | dead-code-audit → debt-cost-estimate → constraint-analysis |
 | **Architecture review** | architecture-map → dependency-map → removal-impact |
