@@ -58,6 +58,9 @@ Trace every dependency chain *into* the target. This is the reverse of an archit
 - **Monitoring and alerting** — Dashboards, alerts, and health checks configured for this service. Removal without cleanup leaves orphan alerts
 - **Load balancer and routing config** — Nginx, HAProxy, or cloud load balancer rules routing traffic to this service
 - **Data pipeline consumers** — ETL jobs, data warehouse ingestion pipelines, Airflow DAGs, dbt models, or Spark jobs that pull data from this service's tables, APIs, or event streams. These are often owned by the data team and invisible to the application engineering org. A service removal that cuts off a pipeline silently breaks dashboards, ML models, and executive reports downstream
+- **Supabase Edge Function consumers** — search for `supabase.functions.invoke('function-name')` in frontend code to find which UI components depend on each function
+- **Supabase RPC consumers** — search for `supabase.rpc('function_name')` to find database function dependencies from frontend and backend code
+- **Supabase Auth triggers** — database triggers on `auth.users` that fire on signup/login — removing these breaks onboarding flows, welcome emails, profile initialization, and any post-signup automation
 
 For each dependency found, classify:
 - **Hard dependency**: Removal breaks the consumer immediately. 500 errors. Missing data. Failed jobs. Users see errors

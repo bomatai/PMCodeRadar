@@ -12,7 +12,7 @@ Print the full catalog of PMCodeRadar skills below, exactly as formatted.
 
 ---
 
-## All PMCodeRadar Skills (22)
+## All PMCodeRadar Skills (23)
 
 ### Level 1 — Quick Wins (< 2 min)
 
@@ -55,6 +55,7 @@ Print the full catalog of PMCodeRadar skills below, exactly as formatted.
 |---|------|---------|-----------|
 | 21 | Setup | `/pmcoderadar` | Scan your repo and get personalized skill recommendations |
 | 22 | Catalog | `/catalog` | Show this skill list (you are here) |
+| 23 | Feedback | `/feedback` | Share feedback, report problems, or suggest new skills |
 
 ---
 

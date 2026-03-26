@@ -55,6 +55,8 @@ Reverse-engineer the full search implementation by scanning for:
 - **Indexed fields** — which database fields or document properties are actually searchable? Title only? Title + description? Full text of content? Tags? Metadata? Custom fields?
 - **Non-indexed fields** — fields that exist in the data model but are NOT included in search. These are the blind spots. Tags? Comments? File contents? Custom attributes? User bios?
 - **Search engine** — is it database LIKE queries? Full-text search (Postgres `tsvector`, MySQL FULLTEXT)? Elasticsearch? Algolia? MeiliSearch? Typesense? A third-party API? A combination?
+- **AI/LLM-powered search** — OpenAI, Claude, or embedding-based semantic search where the LLM handles ranking, fuzzy matching, and relevance instead of traditional indexes. If the search system uses AI/LLM ranking instead of traditional database queries, describe the prompt engineering and model used rather than indexing strategy
+- **Vector similarity search** — pgvector, Pinecone, or Supabase vector columns used for semantic matching. Look for `.similarity()`, `<->` distance operators, embedding generation calls, and vector index definitions
 - **Ranking algorithm** — how are results ordered? By relevance score? By date? By popularity? By some custom formula? Is there boosting for exact matches vs. partial matches? Field-level weighting?
 - **Query processing** — does it handle typos (fuzzy matching)? Stemming (search "running" finds "run")? Synonyms? Stop word removal? Special character handling? What happens to queries with quotes, operators, or Boolean logic?
 - **Tokenization** — how are search terms split? Whitespace only? CamelCase splitting? Hyphen handling? Does "real-time" match "realtime"?

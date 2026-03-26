@@ -59,6 +59,9 @@ Scan the target module and trace outward. For every connection found, follow it 
 - **WebSocket or real-time connections** — Long-lived connections that maintain state and break differently than HTTP
 - **GraphQL resolvers and schema stitching** — Resolvers that federate data from multiple services, schema stitching or federation config that merges remote schemas. A change to one subgraph's types can break the composed supergraph. Trace resolver chains, dataloader patterns, and any @key or @external directives that create cross-service type dependencies
 - **gRPC .proto file imports** — Protobuf definition files that services import to generate client/server stubs. A field renumbering or type change in a .proto file breaks every service that compiled against it. Trace import chains in .proto files and identify every service that depends on generated code from the target proto
+- **Supabase direct DB calls from frontend** — `supabase.from('table')` calls in React hooks/components — these are the primary data access pattern in BaaS architectures, not API routes. Map which components query which tables directly
+- **Supabase Edge Functions** — `supabase/functions/*/index.ts` as the backend service layer (Deno runtime, not Express). Each function directory is a deployable unit with its own dependencies
+- **Supabase RLS policies** — Row Level Security in migration files (`CREATE POLICY`) as the access control layer — replaces traditional middleware auth checks. Map which tables have RLS enabled and what policies gate access
 
 For each dependency found, classify:
 - **Direction**: Inbound (something depends on this module) or Outbound (this module depends on something)

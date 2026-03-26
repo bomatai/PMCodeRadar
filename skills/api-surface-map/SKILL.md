@@ -55,6 +55,9 @@ Also check for:
 Scan for every API endpoint definition in the codebase:
 
 - **Route definitions** — Express `app.get()`, `app.post()`, etc.; Next.js `/pages/api/` files; Django `urlpatterns`; Rails `routes.rb`; FastAPI decorators; whatever framework is in use
+- **Supabase Edge Functions** — `Deno.serve()` or `serve()` handlers in `supabase/functions/*/index.ts` — each directory is an endpoint
+- **Supabase RPC functions** — `supabase.rpc('function_name')` calls from the frontend — these are database functions exposed as API surface
+- **Direct Supabase client calls** — `supabase.from('table').select/insert/update/delete` as implicit API surface — in BaaS architectures these replace traditional REST endpoints
 - **HTTP method** — GET, POST, PUT, PATCH, DELETE for each route
 - **Path and parameters** — the URL path including dynamic segments (`:id`, `[slug]`, `{user_id}`, etc.)
 - **Request body / query params** — what the endpoint accepts as input (types, required fields, validation)

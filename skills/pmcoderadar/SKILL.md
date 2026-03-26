@@ -42,6 +42,9 @@ Scan the repository and output a **Repo Type** classification as the first item 
 - **Microservices**: Detect `docker-compose.yml` / `docker-compose.yaml` with multiple services defined, Kubernetes manifests (`k8s/` directory, `*.yaml` files with `kind: Deployment` or `kind: Service`), or multiple `Dockerfile` files in different directories.
 - **Mobile**: Detect React Native (`react-native` in `package.json` dependencies), Flutter (`pubspec.yaml`), Swift/iOS (`.xcodeproj` or `.xcworkspace` directories), Kotlin/Android (`build.gradle.kts` with Android plugin or `AndroidManifest.xml`).
 - **Data/ML Pipeline**: Detect Jupyter notebooks (`.ipynb` files), Airflow DAGs (`dags/` directory or `airflow.cfg`), dbt models (`dbt_project.yml`), or ML frameworks (TensorFlow, PyTorch, scikit-learn in dependencies).
+- **Supabase**: Detect `supabase/config.toml`, `supabase/functions/` directory, `@supabase/supabase-js` in `package.json` — classify as "Supabase Fullstack" or "Supabase + [frontend framework]" (e.g., "Supabase + Next.js"). Supabase repos have no traditional backend server — Edge Functions, RLS policies, and direct client calls replace Express/Django-style API routes.
+- **Firebase**: Detect `firebase.json`, `functions/` directory, `firebase` in `package.json` — classify as "Firebase Fullstack" or "Firebase + [frontend framework]."
+- **General BaaS pattern**: Frontend app with no traditional backend server, using a Backend-as-a-Service for auth, database, and serverless functions. Detect by the absence of server frameworks (Express, Django, Rails, FastAPI) combined with the presence of BaaS SDKs (Supabase, Firebase, AWS Amplify, Appwrite).
 
 Then determine:
 
