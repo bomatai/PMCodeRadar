@@ -53,7 +53,7 @@ Print the full catalog of PMCodeRadar skills below, exactly as formatted.
 
 | # | Name | Command | One-Liner |
 |---|------|---------|-----------|
-| 21 | Setup | `/setup` | Scan your repo and get personalized skill recommendations |
+| 21 | Setup | `/pmcoderadar` | Scan your repo and get personalized skill recommendations |
 | 22 | Catalog | `/catalog` | Show this skill list (you are here) |
 
 ---
@@ -65,7 +65,7 @@ Common PM scenarios and the skills to run:
 | Scenario | Run These Skills (in order) |
 |----------|----------------------------|
 | Pre-launch checklist | `/pre-ship-scan` then `/error-audit` then `/privacy-audit` |
-| New to a codebase | `/setup` then `/architecture-map` then `/schema-explain` |
+| New to a codebase | `/pmcoderadar` then `/architecture-map` then `/schema-explain` |
 | Planning a feature removal | `/removal-impact` then `/flag-audit` then `/dead-code-audit` |
 | Sprint planning ammo | `/debt-cost-estimate` then `/constraint-analysis` |
 | Analytics review | `/event-inventory` then `/search-audit` |
@@ -76,7 +76,7 @@ Common PM scenarios and the skills to run:
 
 ## Getting Started
 
-Run `/setup` for personalized recommendations based on your repo.
+Run `/pmcoderadar` for personalized recommendations based on your repo.
 
 ---
 

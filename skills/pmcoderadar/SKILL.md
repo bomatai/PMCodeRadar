@@ -1,8 +1,8 @@
 ---
-name: setup
+name: pmcoderadar
 description: >
   Use this skill when a PM first installs PMCodeRadar and wants to know where to start.
-  Trigger on /setup or when the user says things like
+  Trigger on /pmcoderadar or when the user says things like
   "how do I use PMCodeRadar", "where should I start", "which skills should I run first",
   "set up PMCodeRadar", "PMCodeRadar intro", "what can PMCodeRadar do",
   "help me get started with codebase analysis", or "I'm new to PMCodeRadar."
@@ -100,7 +100,7 @@ These skills give you the kind of insight that makes architects double-take. You
 
 | # | Skill | Command | What It Does |
 |---|-------|---------|-------------|
-| 21 | Setup & Repo Diagnostic | `/setup` | Scans repo, classifies type, recommends which skills to run first |
+| 21 | Setup & Repo Diagnostic | `/pmcoderadar` | Scans repo, classifies type, recommends which skills to run first |
 
 ### Step 3: Personalized Recommendations
 
@@ -159,10 +159,10 @@ Recommended first: `/api-surface-map` (or whichever skill ranked #1 above). Stat
 
 ## Tips
 
-- Run `/setup` once per repo. The results rarely change unless the team adds a major new system.
+- Run `/pmcoderadar` once per repo. The results rarely change unless the team adds a major new system.
 - Start with Level 1 and 2 skills. Level 3 skills are most powerful when you already understand the codebase basics.
 - Share the setup output with new PMs joining the team — it is the fastest onboarding doc for codebase context.
-- Run `/setup` before sprint planning — it takes 2 minutes and reminds you what systems you are working with.
+- Run `/pmcoderadar` before sprint planning — it takes 2 minutes and reminds you what systems you are working with.
 - If setup recommends a skill you have never used, try it. The skills that feel unfamiliar usually teach you the most.
 - Share the skill table with other PMs on your team. This plugin is better when everyone uses it.
 - When in doubt, start with `/dead-code-audit`. It works on every repo and always finds something.

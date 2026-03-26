@@ -15,6 +15,6 @@
 **Level 1:** constraint-analysis, debt-cost-estimate, pre-ship-scan, dead-code-audit
 **Level 2:** event-inventory, duplicate-check, schema-explain, error-audit, api-surface-map, onboarding-audit, validation-audit, route-audit, notification-audit, search-audit
 **Level 3:** architecture-map, removal-impact, privacy-audit, flag-audit, dependency-map, migration-risk
-**Meta:** setup, catalog
+**Meta:** pmcoderadar, catalog
 
 Built by Boma Tai-Osagbemi | pmplaybook.ai

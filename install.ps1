@@ -98,7 +98,7 @@ $InstalledSkills = Get-ChildItem -Path "$SkillsDir\*\SKILL.md" -ErrorAction Sile
 $InstalledCount = if ($InstalledSkills) { $InstalledSkills.Count } else { 0 }
 
 # Check a few key skills exist
-$KeySkills = @("setup", "error-audit", "schema-explain", "constraint-analysis")
+$KeySkills = @("pmcoderadar", "error-audit", "schema-explain", "constraint-analysis")
 $MissingKeys = @()
 foreach ($Key in $KeySkills) {
     if (-not (Test-Path "$SkillsDir\$Key\SKILL.md")) {
@@ -120,9 +120,9 @@ if ($MissingKeys.Count -eq 0 -and $InstalledCount -ge 23) {
     Write-Host "  1. Close Claude Code completely (if it's open)" -ForegroundColor White
     Write-Host "  2. Open your terminal and cd into any codebase" -ForegroundColor White
     Write-Host "  3. Start Claude Code" -ForegroundColor White
-    Write-Host "  4. Type:  /setup" -ForegroundColor Yellow
+    Write-Host "  4. Type:  /pmcoderadar" -ForegroundColor Yellow
     Write-Host ""
-    Write-Host "  That's it. The setup skill will scan your repo" -ForegroundColor DarkGray
+    Write-Host "  That's it. The pmcoderadar skill will scan your repo" -ForegroundColor DarkGray
     Write-Host "  and tell you exactly what to run next." -ForegroundColor DarkGray
     Write-Host ""
     Write-Host "  Built by Boma Tai-Osagbemi | pmplaybook.ai" -ForegroundColor Cyan

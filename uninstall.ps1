@@ -5,7 +5,7 @@
 $skillsDir = Join-Path $env:USERPROFILE ".claude" "skills"
 
 $pmSkills = @(
-    "setup",
+    "pmcoderadar",
     "constraint-analysis",
     "debt-cost-estimate",
     "pre-ship-scan",

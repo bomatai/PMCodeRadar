@@ -88,7 +88,7 @@ chmod +x install.sh
 
 **Step 5.** Navigate to any codebase and type:
 ```
-/setup
+/pmcoderadar
 ```
 
 > **If the install script worked, you're done.** Skip to [Your First 10 Minutes](#your-first-10-minutes) below.
@@ -125,13 +125,13 @@ Copy-Item -Recurse -Path "C:\Users\YourName\Downloads\PMCodeRadar\skills\*" -Des
 
 > Replace the download path with wherever you actually saved PMCodeRadar.
 
-After copying, your `~/.claude/skills/` folder should contain 23 subfolders (e.g. `setup/`, `error-audit/`, `schema-explain/`, etc.), each with a `SKILL.md` inside. That's the only file structure that matters.
+After copying, your `~/.claude/skills/` folder should contain 23 subfolders (e.g. `pmcoderadar/`, `error-audit/`, `schema-explain/`, etc.), each with a `SKILL.md` inside. That's the only file structure that matters.
 
 **Step 3 — Restart Claude Code.** Close it completely and reopen it.
 
 **Step 4 — Verify it works.** Navigate to any codebase and type:
 ```
-/setup
+/pmcoderadar
 ```
 
 If you see output about your repo, you're good. If you see "skill not found," check the [Troubleshooting](#troubleshooting) section below.
@@ -143,7 +143,7 @@ If you see output about your repo, you're good. If you see "skill not found," ch
 After installation, here's exactly what to do:
 
 1. **Open your terminal**, `cd` into any codebase you work on, and start Claude Code.
-2. **Run setup first**: `/setup` — it scans your repo and tells you what to run next.
+2. **Run setup first**: `/pmcoderadar` — it scans your repo and tells you what to run next.
 3. **Try one of these beginner skills:**
 
 | Try This | What It Does | Why Start Here |
@@ -183,7 +183,7 @@ After installation, here's exactly what to do:
 | 18 | Feature Flag Impact Audit | `/flag-audit` | 3 | Every flag, what it gates, what breaks if removed |
 | 19 | Third-Party Dependency Map | `/dependency-map` | 3 | Every external vendor and what depends on it |
 | 20 | Migration Risk Assessment | `/migration-risk` | 3 | Risk map for database migrations |
-| 21 | Setup & Repo Diagnostic | `/setup` | Meta | Scan your repo and get personalized skill recommendations |
+| 21 | Setup & Repo Diagnostic | `/pmcoderadar` | Meta | Scan your repo and get personalized skill recommendations |
 | 22 | Skill Catalog | `/catalog` | Meta | See the full list of available skills and workflows |
 | 23 | Feedback | `/feedback` | Meta | Share feedback and suggest improvements |
 
@@ -225,7 +225,7 @@ Each skill is self-contained — no dependencies on the others.
 
 A typical PM session might look like:
 
-1. **Start with setup**: `/setup` — get the lay of the land
+1. **Start with setup**: `/pmcoderadar` — get the lay of the land
 2. **Map the surface**: `/api-surface-map` — know what your product exposes
 3. **Understand the data**: `/schema-explain` — know what your product stores
 4. **Find the waste**: `/dead-code-audit` — find what can be cleaned up
@@ -260,7 +260,7 @@ Every skill includes:
 Each skill recommends related skills to run next. Here's the full map:
 
 ```
-                        /setup
+                        /pmcoderadar
                           |
             +-------------+-------------+
             v             v             v
@@ -320,7 +320,7 @@ Each skill recommends related skills to run next. Here's the full map:
 ### "Skill not found" or command doesn't work
 
 1. **Did you restart Claude Code?** After installing, you must close and reopen Claude Code for it to pick up new skills.
-2. **Are the skills in the right directory?** Each skill should be a folder inside `~/.claude/skills/` with a `SKILL.md` inside (e.g. `~/.claude/skills/setup/SKILL.md`). Not nested deeper.
+2. **Are the skills in the right directory?** Each skill should be a folder inside `~/.claude/skills/` with a `SKILL.md` inside (e.g. `~/.claude/skills/pmcoderadar/SKILL.md`). Not nested deeper.
 3. **Did you copy the right thing?** The install script handles this, but if you did it manually: copy the _contents_ of `PMCodeRadar/skills/` into `~/.claude/skills/`, not the PMCodeRadar folder itself.
 
 ### "I ran a skill but nothing happened"
@@ -334,7 +334,7 @@ Each skill recommends related skills to run next. Here's the full map:
 
 ### "I don't know which skill to run"
 
-- Start with `/setup` — it scans your repo and recommends skills based on what it finds.
+- Start with `/pmcoderadar` — it scans your repo and recommends skills based on what it finds.
 - Or use the [Common Workflows](#skill-cross-reference-map) table above to pick a workflow that matches your goal.
 
 ### Install script errors
@@ -363,7 +363,7 @@ Each skill is a single `SKILL.md` file inside its own folder in `~/.claude/skill
 
 ```
 ~/.claude/skills/
-  setup/SKILL.md
+  pmcoderadar/SKILL.md
   error-audit/SKILL.md
   schema-explain/SKILL.md
   constraint-analysis/SKILL.md

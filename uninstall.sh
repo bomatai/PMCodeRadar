@@ -8,7 +8,7 @@ set -e
 SKILLS_DIR="$HOME/.claude/skills"
 
 PM_SKILLS=(
-    "setup"
+    "pmcoderadar"
     "constraint-analysis"
     "debt-cost-estimate"
     "pre-ship-scan"

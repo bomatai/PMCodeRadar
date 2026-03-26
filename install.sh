@@ -87,7 +87,7 @@ INSTALLED_COUNT=$(find "$SKILLS_DIR" -name "SKILL.md" -maxdepth 2 2>/dev/null | 
 
 # Check key skills exist
 MISSING=""
-for KEY in setup error-audit schema-explain constraint-analysis; do
+for KEY in pmcoderadar error-audit schema-explain constraint-analysis; do
     if [ ! -f "$SKILLS_DIR/$KEY/SKILL.md" ]; then
         MISSING="$MISSING $KEY"
     fi
@@ -107,9 +107,9 @@ if [ -z "$MISSING" ] && [ "$INSTALLED_COUNT" -ge 23 ]; then
     echo "  1. Close Claude Code completely (if it's open)"
     echo "  2. Open your terminal and cd into any codebase"
     echo "  3. Start Claude Code"
-    echo "  4. Type:  /setup"
+    echo "  4. Type:  /pmcoderadar"
     echo ""
-    echo "  That's it. The setup skill will scan your repo"
+    echo "  That's it. The pmcoderadar skill will scan your repo"
     echo "  and tell you exactly what to run next."
     echo ""
     echo "  Built by Boma Tai-Osagbemi | pmplaybook.ai"
